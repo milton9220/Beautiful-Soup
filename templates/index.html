@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <title>Test - A Sample Website</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        {% for product in products %}
+        <h1 id='site_title'>{{ product.title }}</h1>
+        <hr></hr>
+        <div class="article">
+            <h2><a href="article_1.html">{{ product.price}}:{{product.price_amount}}  </a></h2>
+            
+        </div>
+        {% endfor %}
+        <hr></hr>
+        {% for product in chal_products %}
+        <h1 id='site_title'>{{ product.title_chal }}</h1>
+        <hr></hr>
+        <div class="article">
+        <h2><a href="article_1.html">Price:{{product.price_chal}}  </a></h2>
+    
+        </div>
+        {% endfor %}
+        <hr></hr>
+        {% for product in skin_products %}
+       <h1 id='site_title'>{{ product.title }}</h1>
+       <hr></hr>
+       <div class="article">
+       <h2><a href="https://www.shwapno.com/products/meat--fish-meat-chicken/other/broiler-chicken-with-skin-per-kg/pid-12100234.aspx">Price:{{product.price}}  </a></h2>
+       </div>
+{% endfor %}
+
+        <div class='footer'>
+            <p>Footer Information</p>
+        </div>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
